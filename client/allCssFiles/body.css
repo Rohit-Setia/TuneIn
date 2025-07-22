@@ -1,0 +1,37 @@
+.body_cmp {
+  max-width: 90%;
+  width: 1000px;
+  height: 500px;
+  border-radius: 15px;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLmb-D5z3nfXo3wNUZbmR3_GIr45i2-AbVQZ8qIGbs_yTE-AyuhSsyI1Ce1ZidA9UzGtq3wmhNJo7bNBeBaeb3mtfZFSqgMWAwTNkb15BzAQqBdi5JuxzLNysCg--Keaugy2K4NNapXLR-pLXZ8NEDUN8prjkAsblNqlAdtAS3CskW5p3OR1kKsCaph8TlR3y2Phkk-ay0CMNCDtmQKM-Apnb8eLX_dpCzN4gHtbMTEJ7Du-qC_8v9r-lnFl4woywLJhWT6mzYxm0");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .body_cmp {
+    height: auto;
+    padding: 20px;
+  }
+
+  .body_cmp span {
+    font-size: 24px;
+  }
+
+  .body_cmp p {
+    font-size: 16px;
+  }
+
+  .body_cmp div {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,10 @@
+/* SubmitButton.css */
+.submit-btn {
+  padding: 12px 30px;
+  background: #f86b06;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}

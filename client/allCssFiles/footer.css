@@ -1,0 +1,76 @@
+.footerbar {
+  color: aliceblue;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  list-style: none;
+  background-color: transparent; 
+  text-align: center;
+}
+
+.footerbar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.icons {
+  color: aliceblue;
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.icons li a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-text {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.footer-container {
+ 
+  padding: 20px 0;
+  width: 100%;
+}
+
+
+/* ✅ RESPONSIVE BREAKPOINTS */
+@media (max-width: 768px) {
+  .footerbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .icons {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerbar li a,
+  .icons li a {
+    font-size: 14px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}

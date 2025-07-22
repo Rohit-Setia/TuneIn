@@ -1,0 +1,56 @@
+.music-service-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b1b14; /* dark brown background */
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: #fff;
+  width: 600px;
+  margin: 20px auto;
+}
+
+.icon-box {
+  background-color: #3a2922;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #caa892; /* light beige */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.text-content {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.text-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.text-content p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #c5b5aa;
+}
+
+.connect-button {
+  background-color: #5e3c2c;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+ 
+}
+
+.connect-button:hover {
+  background-color: #744d38;
+}
