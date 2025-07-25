@@ -13,25 +13,18 @@ export default function App() {
       
       <div className="fixed top-0 w-full z-50">
         <Navbar />
-      </div>
-
-      
-   <div className="mt-[90px] mb-[70px] overflow-y-auto bg-[#231810] h-[calc(100vh-160px)]">
-
+      </div>    
+   <div className=" mb-[70px] overflow-y-auto bg-[#231810] h-[calc(100vh-160px)]">
         <Routes>
           <Route path="/" element={<Body_comp />} />
           <Route path="/Setting_Pg" element={<Setting_Pg />} />
           <Route path="/Mood" element={<Mood />} />
           <Route path="/Sign_up" element={  <Sign_up/>} />
-        
         </Routes>
       </div>
-
-     
-      <div className="fixed bottom-[-10px] w-full z-50">
+       <div className="fixed bottom-[-10px] w-full z-50">
         <Footer />
       </div>
-      
     </div>
   );
 }

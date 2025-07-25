@@ -1,7 +1,8 @@
 import React from 'react';
 import MoodInput from '../mood/MoodInput';
+
 // import UploadSection from '../mood/UploadSection';
-// import SubmitButton from '../mood/SubmitButton';
+import SubmitButton from '../mood/SubmitButton';
 // import './Mood.css'
 
 export default function Mood() {
@@ -11,9 +12,9 @@ export default function Mood() {
       <h2 className="">How are you feeling today?</h2>
       <MoodInput /> 
     
-      {/* 
       
-      <SubmitButton /> */}
+      
+      <SubmitButton />
       
     </section>
    

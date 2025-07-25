@@ -32,7 +32,7 @@ import axios from 'axios';
 
   return (
     <>
-      <div className="h-screen w-screen bg-transparent flex justify-center items-center px-4">
+      <div className="h-[500px] mt-[100px] w-screen bg-transparent flex justify-center items-center px-4">
         <div className="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 flex-1">
           <h2 className="text-white tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">
             Sign up for free to start listening
