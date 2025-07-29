@@ -10,7 +10,7 @@ export default function Setting_Pg() {
         
         
         <div className='h-28 w-[1290px]  bg-transparent flex relative '>
-      
+        
         <div className='h-28 w-28  bg-transparent flex justify-center p-4 flex-col gap-4' >
               <div class="text-white flex items-center justify-center rounded-lg bg-[#493222] shrink-0 size-12" data-icon="MusicNote" data-size="24px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">

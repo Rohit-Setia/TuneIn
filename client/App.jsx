@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Mood from './TempData/Mood';
+import  Rcnt_pld from './Rcnt_pld'
 import Navbar from './frontpagecomponents/navbar';
 import Footer from './frontpagecomponents/footer';
 import Body_comp from './frontpagecomponents/body_comp';
@@ -10,12 +11,13 @@ import Songs from './Audius_Api/Songs';
 export default function App() {
   return (
     <>
+    {/* <Rcnt_pld/>  */}
     <div className="h-screen bg-[#231810] w-screen flex flex-col overflow-hidden">
       
       <div className="fixed top-0 w-full z-50">
         <Navbar />
       </div>    
-   <div className=" mb-[70px] overflow-y-auto bg-[#231810] h-[calc(100vh-160px)]">
+   <div className=" bg-[#231810] h-[calc(100vh-160px)]">
         <Routes>
           <Route path="/" element={<Body_comp />} />
           <Route path="/Setting_Pg" element={<Setting_Pg />} />

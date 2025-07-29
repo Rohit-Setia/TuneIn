@@ -3,7 +3,7 @@ export const fetchAudiusTracks = async (mood) => {
     `https://discoveryprovider.audius.co/v1/tracks/search?query=${encodeURIComponent(
       mood
     )}&limit=10&app_name=Moodify`
-  );
+  );  
   const { data } = await response.json();
 
   const tracks = data.map((track) => ({

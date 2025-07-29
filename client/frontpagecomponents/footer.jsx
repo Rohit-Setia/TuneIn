@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className="w-full bg-[#231810]  py-3 text-white flex flex-col items-center gap-4">
+    <div className="w-full bg-[#231810]  h-[100px] py-3 text-white flex flex-col items-center gap-4">
       
       {/* Footer Navigation Links */}
       <ul className="w-full flex flex-wrap justify-center items-center gap-20 md:gap-40 text-center list-none">
