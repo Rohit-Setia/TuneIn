@@ -9,20 +9,20 @@ import axios from 'axios';
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:5173/api/users', {
+      const response = await axios.post('http://localhost:3001/api/users', {
         name,
         email,
         age: Number(age),
         password,
       });
-      console.log('✅ User added:', response.data);
+      console.log(' User added:', response.data);
       alert('User saved to DB!');
       setName('');
     setEmail('');
     setAge('');
     setPassword('');
     } catch (error) {
-      console.error('❌ Error saving user:', error.response?.data || error.message);
+      console.error(' Error saving user:', error.response?.data || error.message);
       alert(error.response?.data?.error || `Failed to save user.`);
     }
   };

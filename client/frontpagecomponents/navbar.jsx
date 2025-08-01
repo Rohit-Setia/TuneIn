@@ -24,7 +24,14 @@ export default function Navbar() {
             <Link to="/">About</Link>
           </li>
           <li className="hover:text-orange-400 transition">
-            <Link to="/">Recent Played</Link>
+            <Link to="/LogIn_Pg">Log-In</Link>
+          </li>
+          <li>
+            <Link to="/Sign_up">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition">
+                Sign Up
+              </button>
+            </Link>
           </li>
           <li className="hover:text-orange-400 transition">
             <Link to="/Setting_Pg"><div className="text-white" data-icon="Gear" data-size="10px" data-weight="regular">
@@ -36,13 +43,7 @@ export default function Navbar() {
               </div>
     </Link>
           </li>
-          <li>
-            <Link to="/Sign_up">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition">
-                Sign Up
-              </button>
-            </Link>
-          </li>
+          
         </ul>
 
         {/* Mobile Menu Toggle */}

@@ -12,7 +12,7 @@ export default function Setting_Pg() {
         <div className='h-28 w-[1290px]  bg-transparent flex relative '>
         
         <div className='h-28 w-28  bg-transparent flex justify-center p-4 flex-col gap-4' >
-              <div class="text-white flex items-center justify-center rounded-lg bg-[#493222] shrink-0 size-12" data-icon="MusicNote" data-size="24px" data-weight="regular">
+              <div className="text-white flex items-center justify-center rounded-lg bg-[#493222] shrink-0 size-12" data-icon="MusicNote" data-size="24px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                     <path
                       d="M210.3,56.34l-80-24A8,8,0,0,0,120,40V148.26A48,48,0,1,0,136,184V98.75l69.7,20.91A8,8,0,0,0,216,112V64A8,8,0,0,0,210.3,56.34ZM88,216a32,32,0,1,1,32-32A32,32,0,0,1,88,216ZM200,101.25l-64-19.2V50.75L200,70Z"
@@ -39,7 +39,7 @@ export default function Setting_Pg() {
 
 
                     <div className='h-28 w-28  bg-transparentflex justify-center p-4 flex-col gap-4' >
-                              <div class="text-white flex items-center justify-center rounded-lg bg-[#493222] shrink-0 size-12" data-icon="Bell" data-size="24px" data-weight="regular">
+                              <div className="text-white flex items-center justify-center rounded-lg bg-[#493222] shrink-0 size-12" data-icon="Bell" data-size="24px" data-weight="regular">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                     <path
                       d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
@@ -96,7 +96,7 @@ export default function Setting_Pg() {
     <span>Contact Us</span>
     <span>→</span>
   </div>
-</div>
+</div>  
 
     </div>
   )

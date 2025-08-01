@@ -19,7 +19,7 @@ const userSchema = Joi.object({
 export const createUser = async (req, res) => {
   const { error } = userSchema.validate(req.body);
   if (error) {
-    console.log("❌ Joi Validation Error:", error.details[0].message);
+    console.log(" Joi Validation Error:", error.details[0].message);
     return res.status(400).json({ error: error.details[0].message });
   }
 
@@ -28,7 +28,7 @@ export const createUser = async (req, res) => {
     await user.save();
     res.status(201).json(user);
   } catch (err) {
-    console.error("❌ Mongo Error:", err.message);
+    console.error(" Mongo Error:", err.message);
     res.status(400).json({ error: err.message });
   }
 };
@@ -48,6 +48,22 @@ export const deleteUser = async (req, res) => {
     if (!user) return res.status(404).json({ error: 'User not found' });
     res.json({ message: 'User deleted successfully' });
   } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+export const loginUser = async (req, res) => {
+  const { name, email, age, password } = req.body;
+  console.log("Login request body:", req.body); // Add this
+
+  try {
+    const user = await User.findOne({ name, email, age, password });
+    if (!user) {
+      return res.status(401).json({ error: "Invalid credentials" });
+    }
+    res.status(200).json({ message: "Login successful", user });
+  } catch (err) {
+    console.error("Login error:", err);
     res.status(500).json({ error: err.message });
   }
 };
