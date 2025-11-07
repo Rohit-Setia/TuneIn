@@ -1,18 +1,18 @@
-export const fetchAudiusTracks = async (mood) => {
-  const response = await fetch(
-    `https://discoveryprovider.audius.co/v1/tracks/search?query=${encodeURIComponent(
-      mood
-    )}&limit=10&app_name=Moodify`
-  );  
-  const { data } = await response.json();
+// audiusApi.js
+export const fetchAudiusTracks = async (mood, { offset = 0, limit = 10 } = {}) => {
+  const url = `https://discoveryprovider.audius.co/v1/tracks/search?query=${encodeURIComponent(
+    mood
+  )}&limit=${limit}&offset=${offset}&app_name=Moodify`;
 
-  const tracks = data.map((track) => ({
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Audius error ${res.status}`);
+  const { data } = await res.json();
+
+  return data.map((track) => ({
     id: track.id,
     title: track.title,
     artist: track.user?.name,
     image: track.artwork?.['150x150'] || null,
-    preview: `https://discoveryprovider.audius.co/v1/tracks/${track.id}/stream?app_name=Moodify`, 
+    preview: `https://discoveryprovider.audius.co/v1/tracks/${track.id}/stream?app_name=Moodify`,
   }));
-
-  return tracks;
 };

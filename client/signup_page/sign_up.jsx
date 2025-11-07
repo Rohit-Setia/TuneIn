@@ -1,34 +1,35 @@
-import {useState,React} from 'react';
-import axios from 'axios';
+import { useState, React } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
-    export default function Sign_up() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [age, setAge] = useState('');
-  const [password, setPassword] = useState('');
+export default function Sign_up() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/api/users', {
+      const response = await axios.post("http://localhost:3001/api/users", {
         name,
         email,
         age: Number(age),
         password,
       });
-      console.log(' User added:', response.data);
-      alert('User saved to DB!');
-      setName('');
-    setEmail('');
-    setAge('');
-    setPassword('');
+      console.log(" User added:", response.data);
+      alert("User saved to DB!");
+      setName("");
+      setEmail("");
+      setAge("");
+      setPassword("");
     } catch (error) {
-      console.error(' Error saving user:', error.response?.data || error.message);
+      console.error(
+        " Error saving user:",
+        error.response?.data || error.message
+      );
       alert(error.response?.data?.error || `Failed to save user.`);
     }
   };
-
-  
-  
 
   return (
     <>
@@ -44,8 +45,8 @@ import axios from 'axios';
               <input
                 placeholder="What's your name?"
                 className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#493222] h-14 placeholder:text-[#cba990] p-4 text-base font-normal leading-normal"
-               value={name}
-               onChange={e => setName(e.target.value)} 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </label>
           </div>
@@ -56,7 +57,8 @@ import axios from 'axios';
               <input
                 placeholder="What's your age?"
                 className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#493222] h-14 placeholder:text-[#cba990] p-4 text-base font-normal leading-normal"
-               value={age} onChange={e => setAge(e.target.value)}
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
               />
             </label>
           </div>
@@ -67,7 +69,8 @@ import axios from 'axios';
               <input
                 placeholder="What's your email?"
                 className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#493222] h-14 placeholder:text-[#cba990] p-4 text-base font-normal leading-normal"
-              value={email} onChange={e => setEmail(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
           </div>
@@ -78,17 +81,31 @@ import axios from 'axios';
               <input
                 placeholder="Create a password"
                 className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#493222] h-14 placeholder:text-[#cba990] p-4 text-base font-normal leading-normal"
-              value={password} onChange={e => setPassword(e.target.value)}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </label>
           </div>
 
           {/* Button + Link */}
-          <div className="flex flex-col items-center justify-center px-4 py-3">
-            <button className="min-w-[84px] w-full max-w-[100px] cursor-pointer items-center justify-center rounded-full h-10  bg-[#f26c0c] text-white text-sm font-bold ml-0 ">
-              <span onClick={handleSubmit} className="truncate">Sign up</span>
+          <div className="flex items-center justify-center px-4 pt-4 gap-8">
+            <button className="min-w-[84px] w-full max-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 bg-[#f26c0c] text-white text-sm font-bold translate-x-[-15px]">
+              <span onClick={handleSubmit} className="truncate">
+                Sign up
+              </span>
             </button>
 
+            <div className="flex gap-3 items-center">
+              <p className="text-white text-md whitespace-nowrap">
+                Already have an account?
+              </p>
+
+              <button className="min-w-[84px] w-full max-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 bg-[#231810] border border-[#f26c0c] hover:bg-[#f26c0c] text-white text-sm font-bold">
+                <span className="truncate">
+                  <Link to="/LogIn_Pg">LogIn</Link>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

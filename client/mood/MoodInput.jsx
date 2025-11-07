@@ -6,7 +6,7 @@ export default function MoodInput({ value, onChange }) {
       <input
         value={value}
         onChange={onChange}
-        className="w-full max-w-[400px] mt-8 h-12 bg-[#4d3224] border border-transparent rounded-[8px] text-white placeholder-white focus:outline-none focus:ring-0 px-4"
+        className="w-full max-w-[400px] text-md mt-8 h-12 bg-[#4d3224] border border-transparent rounded-[8px] text-white placeholder-white focus:outline-none focus:ring-0 px-4"
         type="text"
         placeholder="Describe your mood"
       />

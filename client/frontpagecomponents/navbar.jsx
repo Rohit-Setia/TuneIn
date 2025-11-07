@@ -8,12 +8,12 @@ export default function Navbar() {
     <div className="fixed top-0 left-0 w-full z-50 bg-[#231810] text-white ">
       <div className="flex items-center justify-between px-4 py-3 md:px-10 md:py-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link to="/"><div className="flex items-center gap-2">
          <div className="size-6">
               <img src={Logo} alt="Your Logo SVG" />
             </div>
           <span className="text-xl font-bold">Tune In</span>
-        </div>
+        </div></Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 text-base">
@@ -21,10 +21,7 @@ export default function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li className="hover:text-orange-400 transition">
-            <Link to="/">About</Link>
-          </li>
-          <li className="hover:text-orange-400 transition">
-            <Link to="/LogIn_Pg">Log-In</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/Sign_up">
@@ -59,8 +56,7 @@ export default function Navbar() {
       {isOpen && (
         <ul className="md:hidden flex flex-col items-start px-6 pb-4 gap-3 bg-[#231810] text-base">
           <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>About</Link></li>
-          <li><Link to="/" onClick={() => setIsOpen(false)}>Contact</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
           <li><Link to="/Setting_Pg" onClick={() => setIsOpen(false)}>Settings</Link></li>
           <li>
             <Link to="/Sign_up" onClick={() => setIsOpen(false)}>

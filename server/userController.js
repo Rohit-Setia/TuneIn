@@ -53,11 +53,11 @@ export const deleteUser = async (req, res) => {
 };
 
 export const loginUser = async (req, res) => {
-  const { name, email, age, password } = req.body;
+  const { email, password } = req.body;
   console.log("Login request body:", req.body); // Add this
 
   try {
-    const user = await User.findOne({ name, email, age, password });
+    const user = await User.findOne({ email, password });
     if (!user) {
       return res.status(401).json({ error: "Invalid credentials" });
     }

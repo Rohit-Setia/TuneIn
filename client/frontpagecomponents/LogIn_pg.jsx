@@ -3,9 +3,7 @@ import axios from 'axios';
 
 export default function LogIn_Pg() {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
-    age: '',
     password: ''
   });
 
@@ -32,19 +30,17 @@ export default function LogIn_Pg() {
           Log IN for free to start listening
         </h2>
 
-        {["name", "age", "email"].map((field) => (
-          <div key={field} className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-            <label className="flex flex-col min-w-40 flex-1">
-              <input
-                name={field}
-                type={field === "age" ? "number" : "text"}
-                placeholder={`What's your ${field}?`}
-                className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#493222] h-14 placeholder:text-[#cba990] p-4 text-base font-normal leading-normal"
-                onChange={handleChange}
-              />
-            </label>
-          </div>
-        ))}
+        <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label className="flex flex-col min-w-40 flex-1">
+            <input
+              name="email"
+              type="email"
+              placeholder="What's your email?"
+              className="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#493222] h-14 placeholder:text-[#cba990] p-4 text-base font-normal"
+              onChange={handleChange}
+            />
+          </label>
+        </div>
 
         {/* Password field with eye toggle */}
         <div className="flex max-w-[480px] items-center gap-4 px-4 py-3">

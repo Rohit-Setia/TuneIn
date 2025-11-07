@@ -8,6 +8,7 @@ import Body_comp from './frontpagecomponents/body_comp';
 import Setting_Pg from './setting_page_components/Setting_Pg';
 import Sign_up from './signup_page/sign_up';
 import Songs from './Audius_Api/Songs';
+import About from './aboutpage/about';
 export default function App() {
   return (
     <>
@@ -17,10 +18,13 @@ export default function App() {
       <div className="fixed top-0 w-full z-50">
         <Navbar />
       </div>    
-   <div className=" bg-[#231810] h-[calc(100vh-160px)]">
+   <div className="flex-1 overflow-y-auto bg-[#231810] ">
         <Routes>
           <Route path="/" element={<Body_comp />} />
-          <Route path="/Setting_Pg" element={<Setting_Pg />} />
+          <Route path="/Setting_Pg" element={<div className="flex-1 overflow-y-auto bg-[#231810] py-20"> <Setting_Pg /></div>} />
+          <Route path="/about" element={<div className="flex-1 overflow-y-auto bg-[#231810] pb-20">
+      <About />
+    </div>} />
           <Route path="/Mood" element={<Songs />} />
           <Route path="/Sign_up" element={  <Sign_up/>} />
           <Route path ="/LogIn_Pg" element ={<LogIn_pg/>}/>
