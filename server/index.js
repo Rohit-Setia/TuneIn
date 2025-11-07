@@ -3,7 +3,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import userRoutes from './userRoutes.js';
-
+import dotenv from 'dotenv';
+dotenv.config();
 const app = express();
 
 // Middleware
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // ✅ MongoDB URI - Make sure this works (no &appName at the end)
-const uri = "mongodb+srv://aryabarman002:aryabarman002@cluster0.n0gqnsv.mongodb.net/users?retryWrites=true&w=majority";
+const uri = process.env.Mongo_uri;
 
 // Connect to MongoDB
 mongoose.connect(uri, {
