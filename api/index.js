@@ -64,4 +64,4 @@ export default async function handler(req, res) {
 }
 
 // Routes
-app.use("/users", userRoutes);
+app.use("/", userRoutes);
