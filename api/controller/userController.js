@@ -1,5 +1,5 @@
 // userController.js
-import User from './user.js';
+import User from '../user/user.js';
 import Joi from 'joi';
 import { joiPasswordExtendCore } from 'joi-password';
 
