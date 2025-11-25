@@ -10,7 +10,7 @@ export default function Sign_up() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/api/users", {
+      const response = await axios.post("/api/users", {
         name,
         email,
         age: Number(age),

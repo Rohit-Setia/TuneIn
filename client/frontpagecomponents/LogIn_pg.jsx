@@ -16,7 +16,7 @@ export default function LogIn_Pg() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3001/api/login', formData);
+      const res = await axios.post('/api/login', formData);
       alert(res.data.message + " Login successful");
     } catch (err) {
       alert(err.response?.data?.error + " Login failed" || 'Login failed');
